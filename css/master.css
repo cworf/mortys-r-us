@@ -1,0 +1,103 @@
+body {
+    margin: 0;
+    font-family: Helvetica Neue;
+    background: grey;
+}
+
+div {
+    box-sizing: border-box;
+}
+
+img {
+    max-width: 100%;
+}
+
+a {
+    text-decoration: none;
+    color: green;
+}
+
+h2, h3 {
+    font-family: rick_and_morty;
+}
+
+h1 {
+    font-family: get schwifty;
+    color: green;
+}
+
+h2 {
+    font-size: 4em;
+}
+
+label {
+    width: 33.3333%;
+    float: left;
+}
+
+input {
+    display: none;
+}
+
+
+
+.nav-bar {
+    overflow: auto;
+    background: #b6b6db;
+}
+
+.container {
+    max-width: 1200px;
+    margin: auto;
+    background: rgba(255, 255, 255, 0.63);
+    padding: 50px;
+}
+
+.row {
+    overflow: auto;
+}
+
+.one-third {
+    float: left;
+    width: 33.3333%;
+}
+
+.two-thirds {
+    max-width: 66.6666%;
+    float: left;
+}
+
+.half {
+    float: left;
+    width: 50%;
+}
+
+.box {overflow: auto;}
+
+.attacks table {
+    width: 100%;
+    text-align: center;
+}
+
+.add-to-cart .price {
+    float: left;
+    width: 50%;
+}
+
+.home-link {
+    float: left;
+}
+
+.nav-links {
+    float: right;
+}
+
+.detail-boxes {
+    overflow: auto;
+    float: left;
+    width: 100%;
+}
+
+.box:not(.requirements) {
+    text-align: center;
+}
