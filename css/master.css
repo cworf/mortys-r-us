@@ -101,3 +101,45 @@ input {
 .box:not(.requirements) {
     text-align: center;
 }
+
+.one-fifth {
+    float: left;
+    width: 20%;
+    padding: 0 20px;
+}
+
+.product-link {
+    position: relative;
+    display: block;
+    padding-top: 100%;
+    border: 1px solid;
+}
+
+.other-products {
+    overflow: auto;
+}
+
+a.product-link img {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+}
+
+
+.product-link h4 {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: 0;
+    padding: 15px;
+}
+
+.container > div:not(:last-of-type) {
+    margin-bottom: 40px;
+}
