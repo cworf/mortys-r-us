@@ -9,6 +9,16 @@
 }
 
 @font-face {
+    font-family: 'Huxtable';
+    src: url('Huxtable-Regular.eot');
+    src: url('Huxtable-Regular.eot?#iefix') format('embedded-opentype'),
+        url('Huxtable-Regular.woff') format('woff'),
+        url('Huxtable-Regular.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
     font-family: 'Helvetica Neue';
     src: url('HelveticaNeueBoldCondensed.eot');
     src: url('HelveticaNeueBoldCondensed.eot?#iefix') format('embedded-opentype'),
