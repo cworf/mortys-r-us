@@ -1,4 +1,24 @@
 @font-face {
+    font-family: 'Get Schwifty';
+    src: url('GetSchwifty-Regular.eot');
+    src: url('GetSchwifty-Regular.eot?#iefix') format('embedded-opentype'),
+        url('GetSchwifty-Regular.woff') format('woff'),
+        url('GetSchwifty-Regular.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Helvetica Neue';
+    src: url('HelveticaNeueBoldCondensed.eot');
+    src: url('HelveticaNeueBoldCondensed.eot?#iefix') format('embedded-opentype'),
+        url('HelveticaNeueBoldCondensed.woff') format('woff'),
+        url('HelveticaNeueBoldCondensed.ttf') format('truetype');
+    font-weight: bold;
+    font-style: normal;
+}
+
+@font-face {
     font-family: 'Rick_and_Morty';
     src: url('Rick_and_Morty.eot');
     src: url('Rick_and_Morty.eot?#iefix') format('embedded-opentype'),
