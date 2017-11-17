@@ -1,8 +1,19 @@
+
+h2, h3 {
+    font-family: rick_and_morty;
+}
+
+h1 {
+    font-family: get schwifty;
+    color: green;
+}
+
 body {
     margin: 0;
-    font-family: Helvetica Neue;
-    background: grey;
+    font-family: Huxtable;
+    background: url(../img/bg.jpg);
 }
+
 
 div {
     box-sizing: border-box;
@@ -14,15 +25,6 @@ img {
 
 a {
     text-decoration: none;
-    color: green;
-}
-
-h2, h3 {
-    font-family: rick_and_morty;
-}
-
-h1 {
-    font-family: get schwifty;
     color: green;
 }
 
@@ -39,7 +41,16 @@ input {
     display: none;
 }
 
-
+.box {
+  overflow: auto;
+  position: absolute;
+  top: 50px;
+  left: 0;
+  opacity: 0;
+  visibility: hidden;
+  transition: all .2s ease;
+  right: 0;
+}
 
 .nav-bar {
     overflow: auto;
@@ -63,7 +74,7 @@ input {
 }
 
 .two-thirds {
-    max-width: 66.6666%;
+    width: 66.6666%;
     float: left;
 }
 
@@ -72,7 +83,7 @@ input {
     width: 50%;
 }
 
-.box {overflow: auto;}
+
 
 .attacks table {
     width: 100%;
@@ -93,9 +104,9 @@ input {
 }
 
 .detail-boxes {
-    overflow: auto;
     float: left;
     width: 100%;
+    position: relative;
 }
 
 .box:not(.requirements) {
@@ -142,4 +153,53 @@ a.product-link img {
 
 .container > div:not(:last-of-type) {
     margin-bottom: 40px;
+}
+
+.box {
+}
+
+.details {
+  width: 100%;
+}
+
+input#description-btn:checked ~ .detail-boxes .description {
+    opacity: 1;
+    position: relative;
+    visibility: visible;
+    top: 0;
+}
+
+input#information-btn:checked ~ .detail-boxes .information {
+    opacity: 1;
+    position: relative;
+    visibility: visible;
+    top: 0;
+}
+
+input#Requirements-btn:checked ~ .detail-boxes .requirements {
+    opacity: 1;
+    position: relative;
+    visibility: visible;
+    top: 0;
+}
+
+input#stats-btn:checked ~ .detail-boxes .stats {
+    opacity: 1;
+    position: relative;
+    visibility: visible;
+    top: 0;
+}
+
+input#quote-btn:checked ~ .detail-boxes .quote {
+    opacity: 1;
+    position: relative;
+    visibility: visible;
+    top: 0;
+}
+
+input#character-btn:checked ~ .detail-boxes .character {
+    opacity: 1;
+    position: relative;
+    visibility: visible;
+    top: 0;
 }
