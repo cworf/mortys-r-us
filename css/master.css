@@ -5,12 +5,13 @@ h2, h3 {
 
 h1 {
     font-family: get schwifty;
-    color: green;
+    color: #97ce4c;
 }
 
 body {
     margin: 0;
     font-family: Huxtable;
+    color: #44281d;
     background: url(../img/bg.jpg);
 }
 
@@ -30,11 +31,24 @@ a {
 
 h2 {
     font-size: 4em;
+    text-align: center;
 }
 
 label {
-    width: 33.3333%;
+    width: 32.6333%;
     float: left;
+    background: #223366;
+    color: #d1e4ff;
+    font-size: 27px;
+    text-align: center;
+    margin: 0 1% 1% 0;
+    padding: 10px;
+    box-sizing: border-box;
+    cursor: pointer;
+}
+
+label:nth-child(3n) {
+    margin-right: 0;
 }
 
 input {
@@ -54,14 +68,22 @@ input {
 
 .nav-bar {
     overflow: auto;
-    background: #b6b6db;
+    background: #000000;
+    color: #97ce4c;
 }
 
 .container {
     max-width: 1200px;
     margin: auto;
-    background: rgba(255, 255, 255, 0.63);
+    background: rgba(255, 255, 255, 0.9);
     padding: 50px;
+    margin-top: -10px;
+    border-radius: 10px 10px 0 0;
+    animation: fadein 1s cubic-bezier(0.48, 0.05, 0.67, 1.96);
+    position: relative;
+    box-shadow: 0 0 15px 2px #00b9ff;
+    transition: box-shadow .5s ease;
+    transition-delay: .9s;
 }
 
 .row {
@@ -202,4 +224,13 @@ input#character-btn:checked ~ .detail-boxes .character {
     position: relative;
     visibility: visible;
     top: 0;
+}
+
+.container {
+    box-shadow: 0 0 10px 2px #fff, 0 0 42px 2px #00b9ff;
+}
+
+@keyframes fadein {
+    from { opacity: 0; top: 50px; filter:invert(1)}
+    to   { opacity: 1; top: 0px; filter:invert(0)}
 }
