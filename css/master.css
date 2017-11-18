@@ -39,7 +39,7 @@ h2 {
     margin-top: 20px;
     padding-top: 30px;
     border-radius: 55px 55px 0 0;
-    background-color: rgba(0,97,255,0.07);
+    background-color: rgb(229, 233, 239);
     filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#000061ff', endColorstr='#120061ff',GradientType=0 ); /* IE6-9 */
     transform-origin: bottom;
     perspective-origin: bottom;
@@ -225,6 +225,7 @@ a.product-link img {
   box-shadow: inset 0 0 9px 3px #fff, inset 0 0 67px 0px #0ff;
   border: 1px solid #000;
   color: #fff;
+  min-height: 397px;
 }
 
 .details, .attacks {
@@ -288,9 +289,10 @@ input#character-btn:checked ~ .detail-boxes .character {
     font-size: 2em;
     text-align: center;
     line-height: 1;
-    width: 50%;
-    display: inline-block;
+    width: 80%;
+    display: block;
     position: relative;
+    margin: auto;
 }
 
 .add-to-cart {
@@ -311,9 +313,10 @@ input#character-btn:checked ~ .detail-boxes .character {
     position: relative;
 }
 
-.add-to-cart a {
-    float: right;
+.cart-btn{
+    display: inline-block;
 /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#13fcfe+0,37a6ff+100 */
+    position: relative;
     background: rgb(19,252,254); /* Old browsers */
     background: -moz-linear-gradient(top, rgba(19,252,254,1) 0%, rgba(55,166,255,1) 100%); /* FF3.6-15 */
     background: -webkit-linear-gradient(top, rgba(19,252,254,1) 0%,rgba(55,166,255,1) 100%); /* Chrome10-25,Safari5.1-6 */
@@ -327,8 +330,21 @@ input#character-btn:checked ~ .detail-boxes .character {
     font-weight: bold;
     letter-spacing: 1px;
     text-transform: uppercase;
-    margin-right: 92px;
-    margin-top: 8px;
+    transform: skewx(30deg);
+    width: 64px;
+    height: 6px;
+    left: 52px;
+    float: left;
+    margin-right: 5px;
+}
+
+a.cart-btn span {
+    transform:  skewx(-30deg);
+    position: absolute;
+    top: 8px;
+    left: 0;
+    right: 0;
+    text-align: center;
 }
 
 .price span:before {
@@ -352,7 +368,7 @@ h4 {
     letter-spacing: 1px;
     font-size: 20px;
     border-bottom: 1px solid rgba(255, 255, 255, 0.35);
-    padding-bottom: 9px;
+    padding-bottom: 4px;
 }
 
 .dark-overlay {
@@ -416,4 +432,65 @@ label:hover, input:checked + label {
 input:checked + label {
     box-shadow: 0 0 2px 1px #d37979, 0 0 14px 0px #0ff, inset 0 0 25px #000;
     color: #fff;
+}
+
+.buttons {
+    overflow: auto;
+    margin-top: 15px;
+}
+
+a.cart-btn.grey {
+/* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#93c8c9+0,a2bcd2+100 */background: rgb(147,200,201); /* Old browsers */background: -moz-linear-gradient(top, rgba(147,200,201,1) 0%, rgba(162,188,210,1) 100%); /* FF3.6-15 */background: -webkit-linear-gradient(top, rgba(147,200,201,1) 0%,rgba(162,188,210,1) 100%); /* Chrome10-25,Safari5.1-6 */background: linear-gradient(to bottom, rgba(147,200,201,1) 0%,rgba(162,188,210,1) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#93c8c9', endColorstr='#a2bcd2',GradientType=0 ); /* IE6-9 */}
+
+.other-images {
+    overflow: auto;
+}
+
+a.cart-btn:hover {/* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#87efff+0,99c5ff+100 */
+    background: rgb(135,239,255); /* Old browsers */
+    background: -moz-linear-gradient(top, rgba(135,239,255,1) 0%, rgba(153,197,255,1) 100%); /* FF3.6-15 */
+    background: -webkit-linear-gradient(top, rgba(135,239,255,1) 0%,rgba(153,197,255,1) 100%); /* Chrome10-25,Safari5.1-6 */
+    background: linear-gradient(to bottom, rgba(135,239,255,1) 0%,rgba(153,197,255,1) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#87efff', endColorstr='#99c5ff',GradientType=0 ); /* IE6-9 */
+}
+
+.box.character p {
+    font-size: 4em;
+}
+
+.box.quote p, .box.description {
+    font-size: 2em;
+    font-style: italic;
+}
+
+.box.quote:before {
+    content: '"';
+    font-size: 7em;
+    position: absolute;
+    left: 12px;
+    top: -20px;
+    transform: skewX(-30deg);
+}
+
+.box.requirements ul {
+    font-size: 1.5em;
+}
+
+.box span {
+    display: block;
+    padding: 3px;
+    background: rgba(255, 255, 255, 0.08);
+    box-shadow: inset 0 0 5px rgba(255, 255, 255, 0.26);
+}
+
+.product-img {
+    margin-top: 27px;
+}
+
+tbody tr:hover {
+    background: rgba(255, 255, 255, 0.17);
+}
+
+tr {
+    transition: all .2s ease;
 }
