@@ -110,7 +110,8 @@ input {
 
 .half {
     float: left;
-    width: 48%;
+    width: 49%;
+    margin: 1% 2% 1% 0;
 }
 
 
@@ -311,7 +312,6 @@ input#character-btn:checked ~ .detail-boxes .character {
 }
 
 .box.stats .half {
-    margin: 1%;
     border: 1px solid rgba(255, 255, 255, 0.32);
     padding: 20px;
 }
@@ -322,4 +322,28 @@ h4 {
     font-size: 20px;
     border-bottom: 1px solid rgba(255, 255, 255, 0.35);
     padding-bottom: 9px;
+}
+
+.dark-overlay {
+    position: fixed;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    pointer-events: none;
+    box-shadow: inset 0 0 86px 6px #000;
+    z-index: 99;
+    transition: all .4s ease;
+    transition-delay: 1s;
+}
+
+.other-images img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+
+.half:nth-of-type(2n) {
+    margin-right: 0;
 }
