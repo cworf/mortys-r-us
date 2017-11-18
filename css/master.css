@@ -12,7 +12,9 @@ body {
     margin: 0;
     font-family: Huxtable;
     color: #44281d;
-    background: url(../img/bg.jpg);
+    background: url(../img/bg.jpg) center no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
 }
 
 
@@ -81,7 +83,7 @@ input {
 .container {
     max-width: 1200px;
     margin: auto;
-    background: rgba(255, 255, 255, 0.9);
+    background: rgb(232, 237, 244);
     padding: 50px;
     margin-top: -10px;
     border-radius: 10px 10px 0 0;
@@ -119,6 +121,7 @@ input {
 .attacks table {
     width: 100%;
     text-align: center;
+    border-spacing: 0;
 }
 
 .add-to-cart .price:before {
@@ -152,9 +155,9 @@ input {
 }
 
 .one-fifth {
-    float: left;
-    width: 20%;
-    padding: 0 20px;
+    flex-basis: 20%;
+    padding: 0 20px 0 0px;
+    flex-grow: 1;
 }
 
 .product-link {
@@ -162,21 +165,26 @@ input {
     display: block;
     padding-top: 100%;
     border: 1px solid;
+    background: rgb(13, 68, 136);
+    border-radius: 6px;
+    box-shadow: inset 0 0 14px 1px #fff;
 }
 
 .other-products {
-    overflow: auto;
+    display: flex;
+    justify-content: space-between;
+    margin-top: 100px;
 }
 
 a.product-link img {
     position: absolute;
-    top: 0;
     bottom: 0;
     left: 0;
     right: 0;
-    height: 100%;
+    height: 134%;
     width: 100%;
     object-fit: cover;
+    object-position: top;
 }
 
 
@@ -186,7 +194,10 @@ a.product-link img {
     left: 0;
     right: 0;
     margin: 0;
-    padding: 15px;
+    padding: 15px 5px;
+    background: rgba(0, 0, 0, 0.84);
+    text-align: center;
+    color: #addeea;
 }
 
 .container > div:not(:last-of-type) {
@@ -201,6 +212,15 @@ a.product-link img {
   box-shadow: inset 0 0 9px 3px #fff, inset 0 0 67px 0px #0ff;
   border: 1px solid #000;
   color: #fff;
+}
+
+.details, .attacks {
+    padding: 25px;
+    background: #0d4488;
+    box-shadow: inset 0 0 9px 3px #fff, inset 0 0 67px 0px #0ff;
+    border: 1px solid #000;
+    color: #fff;
+    border-radius: 6px;
 }
 
 input#description-btn:checked ~ .detail-boxes .description {
@@ -346,4 +366,25 @@ h4 {
 
 .half:nth-of-type(2n) {
     margin-right: 0;
+}
+th {
+    padding: 7px;
+    border-right: 1px solid #0d4488;
+}
+
+thead {
+    background: rgba(255, 255, 255, 0.48);
+    color: #000;
+}
+
+th:last-child {
+    border: none;
+}
+
+td {
+    border-bottom: 1px solid rgba(255, 255, 255, 0.48);
+}
+
+table td {
+    padding: 5px;
 }
