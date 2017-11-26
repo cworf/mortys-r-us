@@ -13,6 +13,7 @@ h3 {
     font-size: 3em;
     margin: 0 0 25px;
     border-bottom: 1px solid;
+    clear: both;
 }
 
 body {
@@ -46,12 +47,11 @@ h2 {
     margin-top: 20px;
     padding-top: 30px;
     border-radius: 55px 55px 0 0;
-    background-color: rgba(0, 0, 0, 0.02);
-    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#000061ff', endColorstr='#120061ff',GradientType=0 ); /* IE6-9 */
+     /* IE6-9 */
     transform-origin: bottom;
     perspective-origin: bottom;
     box-shadow: 0 -9px 13px -5px rgba(0, 0, 0, 0.58), 0 -2px 0px 0px rgb(13, 66, 136);
-    transition: transform 1s cubic-bezier(0.51, 0.04, 0.56, 1.74), box-shadow 1s cubic-bezier(0.51, 0.04, 0.56, 1.74), background-color 1s cubic-bezier(0.51, 0.04, 0.56, 1.74);
+    transition: transform 1s cubic-bezier(0.51, 0.04, 0.56, 1.74), box-shadow 1s cubic-bezier(0.51, 0.04, 0.56, 1.74);
     transform: rotateX(-20deg);
     transition-delay: 1.5s;
 }
@@ -97,6 +97,8 @@ input {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    position: relative;
+    z-index: 1;
 }
 .container {
     max-width: 1200px;
@@ -110,15 +112,16 @@ input {
     box-shadow: 0 0 10px 2px #fff, 0 0 42px 2px #00b9ff, 0 0 0 200px rgba(255, 255, 255, 0);
     transition: box-shadow .5s ease;
     transition-delay: .9s;
+    z-index: 2;
 }
 
 .row {
-    overflow: hidden;
+    /* overflow: hidden; */
+    display: flex;
 }
 
 .one-third {
-    float: left;
-    width: 33.3333%;
+    flex-basis: 33.3333%;
     margin-top: 27px;
     border: 1px solid;
     padding: 14px;
@@ -127,8 +130,7 @@ input {
 }
 
 .two-thirds {
-    width: 66.6666%;
-    float: left;
+    flex-basis: 66.6666%;
     transition: all .2s ease;
     padding-left: 40px;
 }
@@ -243,13 +245,13 @@ a.product-link img {
   box-shadow: inset 0 0 9px 3px #fff, inset 0 0 67px 0px #0ff;
   border: 1px solid #000;
   color: #fff;
-  min-height: 479px;
+  min-height: 493px;
 }
 
 .details, .attacks, .one-third {
     padding: 25px;
     background: #0d4488;
-    box-shadow: inset 0 0 9px 3px #fff, inset 0 0 67px 0px #0ff;
+    box-shadow: inset 0 0 9px 3px #fff, inset 0 0 67px 0px #0ff, 0 0 12px #0000005c, 0 0 19px 12px;
     border: 1px solid #000;
     color: #fff;
     border-radius: 6px;
@@ -317,7 +319,7 @@ input#character-btn:checked ~ .detail-boxes .character {
 
 .add-to-cart {
     margin-bottom: 20px;
-    padding-top: 15px;
+    padding-top: 0;
     border-radius: 0 0 55px 55px;
     /*box-shadow: inset 0 -14px 13px -8px rgba(0, 0, 0, 0.58);
     background: rgba(0, 97, 255, 0.07);*/
@@ -399,7 +401,7 @@ h4 {
     bottom: 0;
     pointer-events: none;
     box-shadow: inset 0 0 156px 26px #000;
-    z-index: 99;
+    z-index: 3;
     transition: all 1s ease;
     transition-delay: .5s;
 }
@@ -561,6 +563,7 @@ h1:hover + .sub-title {
     border-radius: 20px;
     font-size: 30px;
     box-shadow: 0 0 10px #00000088;
+    border: 1px solid;
 }
 
 .nav-links {
